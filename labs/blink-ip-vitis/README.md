@@ -2,6 +2,9 @@
 
 This project implements a custom Blink IP and integrates it into a Vitis-based system.
 
+**Note:** This project focuses on design, integration, and validation results. 
+Build artifacts and generated files are intentionally excluded.
+
 ## Objectives
 - Design a custom AXI-Lite peripheral
 - Package and integrate IP into a system
