@@ -22,3 +22,5 @@
 ### Operating System & Build
 - Linux (Ubuntu recommended)
 - Git / GitHub (version control)
+
+**Note:** Exact tool versions may vary; projects focus on architecture, integration, and validation flow.
