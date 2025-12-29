@@ -21,3 +21,13 @@ All projects in this repository are hands-on implementations and verification re
 - Zynq SoC
 
 Each project folder contains implementation files and validation results generated during development.
+
+##  Projects and Links
+| Category | Link |
+|----------|------|
+| FIR Filter Accelerator | [fir-filter-hls](labs/fir-filter-hls/README.md) |
+| CORDIC Accelerator | [cordic-hls](labs/cordic-hls/README.md) |
+| Dense Matrix Multiplication | [matrix-multiplication-hls](labs/matrix-multiplication-hls/README.md) |
+| Sparse Matrix Multiply | [sparse-matrix-multiplication](labs/sparse-matrix-multiplication/README.md) |
+| AXI Stream Validation | [axi-stream-validation](labs/axi-stream-validation/README.md) |
+| Blink IP on Vitis | [blink-ip-vitis](labs/blink-ip-vitis/README.md) |
