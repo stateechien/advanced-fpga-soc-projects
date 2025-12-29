@@ -18,3 +18,12 @@ This project implements matrix multiplication using Vivado HLS and explores perf
 
 ## Takeaways
 Memory access patterns and dataflow design are critical for compute-intensive accelerators.
+
+## How to Reproduce
+
+1. Open Vivado HLS
+2. Import baseline and optimized matrix multiplication sources
+3. Set target device to Zynq-7000
+4. Run C Simulation for functional correctness
+5. Run C Synthesis for both versions
+6. Compare latency and resource utilization reports
