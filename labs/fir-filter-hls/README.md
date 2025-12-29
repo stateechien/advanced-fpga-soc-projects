@@ -2,6 +2,9 @@
 
 This project implements a Finite Impulse Response (FIR) filter using Vivado HLS.
 
+**Note:** This project focuses on design, integration, and validation results. 
+Build artifacts and generated files are intentionally excluded.
+
 ## Objectives
 - Design a streaming FIR filter accelerator
 - Explore pipelining and initiation interval (II)
@@ -30,3 +33,4 @@ This project demonstrates how HLS directives affect performance and resource usa
    - C Synthesis
    - RTL Co-simulation (XSIM)
 6. Review latency, II, and resource usage in synthesis report
+
