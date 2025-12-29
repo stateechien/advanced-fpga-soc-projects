@@ -100,5 +100,5 @@ The end-to-end workflow spans algorithm modeling to system integration:
 accelerator optimization to Linux-controlled system bring-up.
 
 <p align="center">
-  <img src="architecture.svg" alt="System Architecture" width="900">
+  <img src="architecture.png" alt="System Architecture" width="580">
 </p>
