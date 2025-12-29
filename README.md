@@ -14,6 +14,17 @@ All projects in this repository are hands-on implementations and verification re
 | System Validation | AXI Stream, AXI VIP, ILA |
 | SoC Integration | Blink IP on Vitis |
 
+## Projects
+
+| Project | Focus |
+|--------|------|
+| [FIR Filter (HLS)](labs/fir-filter-hls/) | Streaming DSP, pipelining |
+| [CORDIC (HLS)](labs/cordic-hls/) | Fixed-point math, RMSE analysis |
+| [Dense Matrix Multiplication](labs/matrix-multiplication-hls/) | Blocking, dataflow optimization |
+| [Sparse Matrix Multiplication](labs/sparse-matrix-multiplication/) | CSR-based architecture |
+| [AXI Stream Validation](labs/axi-stream-validation/) | AXI VIP, ILA debugging |
+| [Blink IP on Vitis](labs/blink-ip-vitis/) | AXI-Lite IP & SoC integration |
+
 ## Toolchain
 - Vivado / Vivado HLS
 - Vitis
