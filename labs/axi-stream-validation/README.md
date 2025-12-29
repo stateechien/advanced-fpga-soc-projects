@@ -2,6 +2,9 @@
 
 This project focuses on validating AXI Stream data paths using protocol-aware tools.
 
+**Note:** This project focuses on design, integration, and validation results. 
+Build artifacts and generated files are intentionally excluded.
+
 ## Objectives
 - Verify AXI Stream handshake behavior
 - Use AXI VIP for stimulus generation
