@@ -31,3 +31,43 @@ Each project folder contains implementation files and validation results generat
 | Sparse Matrix Multiply | [sparse-matrix-multiplication](labs/sparse-matrix-multiplication/README.md) |
 | AXI Stream Validation | [axi-stream-validation](labs/axi-stream-validation/README.md) |
 | Blink IP on Vitis | [blink-ip-vitis](labs/blink-ip-vitis/README.md) |
+
+## System Architecture Overview
+
+The projects in this repository follow a layered FPGA and SoC architecture,
+covering accelerator design, system integration, and software–hardware co-design.
+
+### Software Layer
+- Linux user applications (e.g., Blink control app)
+- Vitis / bare-metal control programs
+
+### Processing System (PS)
+- Zynq ARM Cortex-A9
+- MicroBlaze soft processor  
+- Responsibilities:
+  - System control
+  - Hardware configuration
+  - Data movement orchestration
+
+### Programmable Logic (PL)
+- Custom accelerators (Vivado HLS / RTL):
+  - FIR Filter
+  - CORDIC
+  - Dense Matrix Multiplication
+  - Sparse Matrix Multiplication (CSR-based)
+- System IPs:
+  - AXI Stream data paths
+  - AXI VIP (protocol-aware verification)
+  - ILA (on-chip debugging)
+  - Blink AXI-Lite IP
+
+### Design & Verification Flow
+- Algorithm modeling (C/C++)
+- Vivado HLS (C simulation, synthesis, RTL co-simulation)
+- Vivado (integration, timing/resource analysis, ILA)
+- Vitis / PetaLinux (software and OS integration)
+
+
+**Key Focus:**  
+End-to-end hardware–software co-design, from algorithm-level acceleration
+to SoC integration and Linux-based hardware control.
