@@ -2,6 +2,9 @@
 
 This project explores sparse matrix multiplication using the CSR (Compressed Sparse Row) format.
 
+**Note:** This project focuses on design, integration, and validation results. 
+Build artifacts and generated files are intentionally excluded.
+
 ## Objectives
 - Implement sparse matrix multiplication in hardware
 - Compare direct CSR computation with adapter-based approaches
