@@ -18,3 +18,15 @@ This project implements a Finite Impulse Response (FIR) filter using Vivado HLS.
 
 ## Takeaways
 This project demonstrates how HLS directives affect performance and resource usage in streaming DSP designs.
+
+## How to Reproduce
+
+1. Launch Vivado HLS (2022.2 or later)
+2. Create a new HLS project and add FIR source files
+3. Set top function to FIR module
+4. Target device: xc7z020-clg400-1
+5. Run:
+   - C Simulation
+   - C Synthesis
+   - RTL Co-simulation (XSIM)
+6. Review latency, II, and resource usage in synthesis report
