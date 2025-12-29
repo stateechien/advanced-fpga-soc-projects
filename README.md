@@ -98,3 +98,5 @@ The end-to-end workflow spans algorithm modeling to system integration:
 
 **Key Focus:** End-to-end hardware–software co-design from
 accelerator optimization to Linux-controlled system bring-up.
+
+![System Architecture](architecture.png)
