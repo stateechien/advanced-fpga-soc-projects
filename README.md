@@ -1,4 +1,5 @@
 # Advanced FPGA & SoC Projects
+> End-to-end FPGA and SoC system projects covering accelerator design, AXI-based integration, verification, and Linux-controlled bring-up on Xilinx Zynq platforms.
 
 This repository contains a curated set of FPGA and SoC projects that I personally implemented, focusing on accelerator design, system integration, and hardware–software co-design.
 
