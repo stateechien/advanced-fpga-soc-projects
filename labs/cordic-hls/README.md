@@ -2,6 +2,9 @@
 
 This project implements a CORDIC-based accelerator for sine and cosine computation.
 
+**Note:** This project focuses on design, integration, and validation results. 
+Build artifacts and generated files are intentionally excluded.
+
 ## Objectives
 - Implement fixed-point CORDIC algorithm in hardware
 - Analyze numerical accuracy using RMSE
