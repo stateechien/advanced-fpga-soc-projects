@@ -34,40 +34,67 @@ Each project folder contains implementation files and validation results generat
 
 ## System Architecture Overview
 
-The projects in this repository follow a layered FPGA and SoC architecture,
-covering accelerator design, system integration, and software–hardware co-design.
+This repository demonstrates a layered hardware and system integration
+architecture for advanced FPGA and SoC projects on Xilinx Zynq platforms.
+Each component interacts through well-defined interfaces and verification flows.
 
 ### Software Layer
-- Linux user applications (e.g., Blink control app)
-- Vitis / bare-metal control programs
+At the software level, embedded applications and control programs
+drive and validate the underlying hardware components:
+
+- Linux user applications (e.g., Blink control application)
+- Bare-metal / Vitis control programs for accelerator interfaces
+
+These software components interact with the hardware through
+memory-mapped control interfaces (e.g., AXI-Lite) and driver APIs.
 
 ### Processing System (PS)
-- Zynq ARM Cortex-A9
-- MicroBlaze soft processor  
-- Responsibilities:
-  - System control
-  - Hardware configuration
-  - Data movement orchestration
+The Zynq Processing System (ARM Cortex-A9) and soft processors such
+as MicroBlaze provide control, configuration, and orchestration:
+
+- Zynq ARM Cortex-A9 for Linux and high-level control
+- MicroBlaze soft CPU for auxiliary control flows
+
+**Responsibilities include:**
+- System control and sequencing
+- Hardware configuration & setup
+- DMA / data movement orchestration
+
+### Interconnect Fabric
+The AXI interconnect fabric (Lite / Stream / Memory mapped) is the backbone
+connecting PS and custom accelerators:
+
+- AXI-Lite for control/status registers
+- AXI-Stream for high-throughput data transfer
+- Memory-mapped AXI for coherent data access
+
+This interconnect allows accelerators and peripherals to communicate
+efficiently and predictably.
 
 ### Programmable Logic (PL)
-- Custom accelerators (Vivado HLS / RTL):
-  - FIR Filter
-  - CORDIC
-  - Dense Matrix Multiplication
-  - Sparse Matrix Multiplication (CSR-based)
-- System IPs:
-  - AXI Stream data paths
-  - AXI VIP (protocol-aware verification)
-  - ILA (on-chip debugging)
-  - Blink AXI-Lite IP
+Custom hardware accelerators and verification IP are implemented in
+the FPGA fabric:
+
+**Custom Accelerators (Vivado HLS / RTL):**
+- FIR Filter accelerator with pipelining
+- CORDIC sine/cosine accelerator
+- Dense Matrix Multiplication accelerator
+- Sparse Matrix Multiplication (CSR-based)
+
+**System IPs and Debug/Verification:**
+- AXI-Stream data paths
+- AXI VIP for protocol-aware verification
+- Integrated Logic Analyzer (ILA) for on-chip waveform capture
+- Blink AXI-Lite peripheral for PS control
 
 ### Design & Verification Flow
-- Algorithm modeling (C/C++)
-- Vivado HLS (C simulation, synthesis, RTL co-simulation)
-- Vivado (integration, timing/resource analysis, ILA)
-- Vitis / PetaLinux (software and OS integration)
+The end-to-end workflow spans algorithm modeling to system integration:
 
+1. Algorithm modeling (C/C++ math and dataflow)
+2. Vivado HLS (C simulation → synthesis → RTL co-simulation)
+3. Vivado integration (block design, constraints, timing/resource reports)
+4. System validation with AXI VIP and ILA capture
+5. Software integration with Vitis and PetaLinux
 
-**Key Focus:**  
-End-to-end hardware–software co-design, from algorithm-level acceleration
-to SoC integration and Linux-based hardware control.
+**Key Focus:** End-to-end hardware–software co-design from
+accelerator optimization to Linux-controlled system bring-up.
