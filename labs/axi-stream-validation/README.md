@@ -18,3 +18,12 @@ This project focuses on validating AXI Stream data paths using protocol-aware to
 
 ## Takeaways
 System-level validation requires both simulation and on-chip debugging to ensure protocol correctness.
+
+## How to Reproduce
+
+1. Open Vivado
+2. Create a block design with AXI Stream components
+3. Insert AXI VIP for protocol-aware verification
+4. Run simulation to verify TVALID/TREADY behavior
+5. Add ILA core and regenerate bitstream
+6. Capture on-chip waveforms to validate runtime behavior
