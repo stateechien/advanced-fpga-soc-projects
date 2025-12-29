@@ -2,6 +2,9 @@
 
 This project implements matrix multiplication using Vivado HLS and explores performance optimization techniques.
 
+**Note:** This project focuses on design, integration, and validation results. 
+Build artifacts and generated files are intentionally excluded.
+
 ## Objectives
 - Implement baseline matrix multiplication
 - Optimize using blocking and loop transformations
